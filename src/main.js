@@ -1,10 +1,10 @@
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './style.css';
-import { createIcons, ArrowUpRight, BarChart, Activity, Cpu, Database, Code, Cloud } from 'lucide';
+import { createIcons, ArrowUpRight, BarChart, Activity, Cpu, Database, Code, Cloud, Menu, X } from 'lucide';
 import { projects, expertise, education } from './data.js';
 
-const icons = { ArrowUpRight, BarChart, Activity, Cpu, Database, Code, Cloud };
+const icons = { ArrowUpRight, BarChart, Activity, Cpu, Database, Code, Cloud, Menu, X };
 
 // Initialize AOS
 AOS.init({
@@ -70,3 +70,24 @@ education.forEach((item, index) => {
 
 // Initialize Icons
 createIcons({ icons });
+
+// Mobile Menu Toggle
+const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+const navLinks = document.getElementById('nav-links');
+
+if (mobileMenuBtn && navLinks) {
+  mobileMenuBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    const iconName = navLinks.classList.contains('active') ? 'x' : 'menu';
+    mobileMenuBtn.innerHTML = `<i data-lucide="${iconName}"></i>`;
+    createIcons({ icons });
+  });
+  
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+      mobileMenuBtn.innerHTML = `<i data-lucide="menu"></i>`;
+      createIcons({ icons });
+    });
+  });
+}
