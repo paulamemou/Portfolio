@@ -1,55 +1,157 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Data Science</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Portfolio | Data Analyst Designer</title>
+    <meta name="description" content="Portfolio de Data Analyst inspiré par le design moderne.">
 </head>
+
 <body>
-    <header>
-        <h1>Bienvenue sur mon Portfolio</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">À propos</a></li>
-                <li><a href="#projects">Projets</a></li>
-                <li><a href="#skills">Compétences</a></li>
+    <nav>
+        <div class="container nav-content">
+            <a href="#" class="logo">PAUL AMEMOU.</a>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#expertise">Expertise</a></li>
+                <li><a href="#projects">Works</a></li>
+                <li><a href="#education">Education</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-        </nav>
-    </header>
+            <div class="nav-btns">
+                <a href="#contact" class="btn btn-dark">Contact Me</a>
+            </div>
+        </div>
+    </nav>
 
-    <section id="about">
-        <h2>À propos de moi</h2>
-        <p>Je suis un(e) data scientist passionné(e) par les données, l'IA et la résolution de problèmes complexes.</p>
-    </section>
-
-    <section id="projects">
-        <h2>Projets</h2>
-        <div class="project">
-            <h3>Analyse des ventes</h3>
-            <p>Analyse de données de ventes pour identifier les tendances et maximiser les profits. <a href="https://github.com/votre-repo/analyse-des-ventes" target="_blank">Voir sur GitHub</a></p>
+    <section id="hero" class="hero">
+        <div class="container hero-grid">
+            <div class="hero-text" data-aos="fade-right">
+                <span>Bonjour, je suis Paul Amemou</span>
+                <h1>Data Analyst & Insights Architect</h1>
+                <p>J'aide les entreprises à transformer des données brutes en histoires belles et exploitables.
+                    Spécialisé dans la visualisation à fort impact et l'analyse prédictive.</p>
+                <div class="hero-btns">
+                    <a href="#contact" class="btn btn-dark">About Me</a>
+                    <a href="#" class="btn btn-primary" style="margin-left: 1rem;">Download CV</a>
+                </div>
+            </div>
+            <div class="hero-image-container" data-aos="fade-left">
+                <div class="hero-image-bg">
+                    <img src="/paul.jpg" alt="Paul">
+                </div>
+                <div class="floating-badge badge-1">
+                    <i data-lucide="bar-chart"></i>
+                    <span>Visualization</span>
+                </div>
+                <div class="floating-badge badge-2">
+                    <i data-lucide="database"></i>
+                    <span>SQL Expert</span>
+                </div>
+                <div class="arrow-circle">
+                    <i data-lucide="arrow-up-right"></i>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="skills">
-        <h2>Compétences</h2>
-        <ul>
-            <li>Python (Pandas, NumPy, Scikit-learn)</li>
-            <li>Visualisation (Matplotlib, Seaborn, Tableau)</li>
-            <li>SQL et bases de données</li>
-        </ul>
+    <section id="expertise" class="section-purple">
+        <div class="container">
+            <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+                <p style="font-weight: 600; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">My
+                    Expertise</p>
+                <h2 style="font-size: 3rem; margin-bottom: 2rem;">Innovative Solutions for Modern Businesses</h2>
+                <p style="opacity: 0.8;">We provide expert data solutions to help you navigate the complex landscape of
+                    information technology.</p>
+            </div>
+            <div class="services-grid" id="services-container">
+                <!-- Services will be injected here -->
+            </div>
+        </div>
     </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Contactez-moi à <a href="mailto:votre.email@example.com">votre.email@example.com</a></p>
+    <section id="projects">
+        <div class="container">
+            <div class="works-header">
+                <div>
+                    <p style="color: var(--primary); font-weight: 700; margin-bottom: 1rem;">MY PORTFOLIO</p>
+                    <h2 style="font-size: 3rem;">Featured Works</h2>
+                </div>
+                <a href="#" class="btn btn-outline">See All Projects</a>
+            </div>
+            <div class="works-grid" id="project-container">
+                <!-- Projects will be injected here -->
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="container">
+        <div class="education-grid">
+            <div data-aos="fade-right">
+                <p style="color: var(--primary); font-weight: 700; margin-bottom: 1rem;">MY EXPERIENCE</p>
+                <h2 style="font-size: 3.5rem; margin-bottom: 2rem;">Beautiful and unique digital experiences</h2>
+                <p style="color: var(--text-muted); margin-bottom: 2rem;">I've spent the last 8 years mastering the art
+                    of data storytelling and strategic analysis.</p>
+                <a href="#" class="btn btn-primary">Let's Talk</a>
+            </div>
+            <div class="timeline" id="timeline-container" data-aos="fade-left">
+                <!-- Timeline items will be injected here -->
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" style="background: var(--bg-grey);">
+        <div class="container" style="text-align: center;">
+            <h2 style="font-size: 4rem; margin-bottom: 3rem;">Let's Connect there</h2>
+            <div
+                style="background: var(--primary); padding: 4rem; border-radius: var(--radius-lg); color: white; position: relative;">
+                <p style="font-size: 1.5rem; margin-bottom: 2rem;">Ready to start your next big project?</p>
+                <a href="mailto:hello@example.com" class="btn btn-dark"
+                    style="background: white; color: var(--primary);">Get in touch</a>
+            </div>
+        </div>
     </section>
 
     <footer>
-        <p>© 2024 - Mon Portfolio</p>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="logo" style="color: white; margin-bottom: 2rem;">PAUL AMEMOU.</div>
+                    <p style="color: var(--text-muted); margin-bottom: 2rem;">Designing high-impact data solutions for
+                        the world's most ambitious teams.</p>
+                    <div style="display: flex; gap: 1rem;">
+                        <!-- Social Icons -->
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li>Home</li>
+                        <li>About Me</li>
+                        <li>Services</li>
+                        <li>Portfolio</li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>paulamemou99@gmail.com</li>
+                        <li>Paris, FR</li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                style="padding-top: 40px; border-top: 1px solid #333; display: flex; justify-content: space-between; color: var(--text-muted); font-size: 0.9rem;">
+                <p>&copy; 2026 Paul Amemou. All rights reserved.</p>
+                <p>Terms & Conditions | Privacy Policy</p>
+            </div>
+        </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script type="module" src="/src/main.js"></script>
 </body>
+
 </html>
+
